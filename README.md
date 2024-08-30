@@ -22,7 +22,7 @@ Implementation using C or pyhton code
 Testing algorithm with different key values. 
 
 ## PROGRAM:
-```
+```python
 #include <stdio.h>
 #include <stdlib.h>
 // Function to perform Caesar Cipher encryption
@@ -99,7 +99,7 @@ Implementation using C or pyhton code
 Testing algorithm with different key values. 
 
 ## PROGRAM:
- ```
+ ```python
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -284,7 +284,7 @@ Implementation using C or pyhton code
 Testing algorithm with different key values. 
 
 ## PROGRAM:
-```
+```python
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>  // Include the necessary header for toupper()
@@ -410,7 +410,7 @@ Implementation using C or pyhton code
 Testing algorithm with different key values. 
 
 ## PROGRAM:
-```
+```python
 #include <stdio.h>
 #include <string.h>
 
@@ -509,7 +509,7 @@ Implementation using C or pyhton code
 Testing algorithm with different key values. 
 
 ## PROGRAM:
-```
+```python
 #include <stdio.h>
 #include <string.h>
 
