@@ -62,7 +62,8 @@ int main() {
 }
 ```
 ## OUTPUT:
-![image](https://github.com/22008421/Cryptography---19CS412-classical-techqniques/assets/119476328/50986280-5169-4cfa-aab9-2a0b18c6e158)
+![Screenshot 2024-08-30 140054](https://github.com/user-attachments/assets/912ee58c-60ae-4dff-8ba4-5aea093f3ef8)
+
 
 ## RESULT:
 The program is executed successfully
@@ -246,7 +247,8 @@ return 0;
 }
 ```
 ## OUTPUT:
-![image](https://github.com/22008421/Cryptography---19CS412-classical-techqniques/assets/119476328/d5008d47-8cbe-4f9d-b4cd-7fee2ec1ca32)
+![Screenshot 2024-08-30 140331](https://github.com/user-attachments/assets/def45f91-1350-41d2-bafe-ed1c361acdb2)
+
 
 ## RESULT:
 The program is executed successfully
@@ -374,7 +376,9 @@ int main() {
 }
 ```
 ## OUTPUT:
-![image](https://github.com/22008421/Cryptography---19CS412-classical-techqniques/assets/119476328/8a7c74c4-5e25-4023-8498-81944038becf)
+
+![Screenshot 2024-08-30 140432](https://github.com/user-attachments/assets/f60c8330-3692-4033-bf73-9d305c7c410d)
+
 
 ## RESULT:
 The program is executed successfully
@@ -458,7 +462,8 @@ int main() {
 }
 ```
 ## OUTPUT:
-![image](https://github.com/22008421/Cryptography---19CS412-classical-techqniques/assets/119476328/81b8d771-ec85-4d04-9714-cea9e413c715)
+![Screenshot 2024-08-30 140525](https://github.com/user-attachments/assets/f3654fb5-94c4-46d6-b841-c28e70fb88bb)
+
 
 ## RESULT:
 The program is executed successfully
@@ -502,61 +507,124 @@ Testing algorithm with different key values.
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-main()
-{
-int i,j,len,rails,count,code[100][1000];
- char str[1000];
- printf("Enter a Secret Message\n");
- gets(str);
- len=strlen(str);
-printf("Enter number of rails\n");
-scanf("%d",&rails);
-for(i=0;i<rails;i++)
-{
- for(j=0;j<len;j++)
- {
- code[i][j]=0;
- }
+#include <stdio.h>
+#include <string.h>
+
+// Function to encrypt the plaintext using Rail Fence Cipher
+void encryptRailFence(char *plaintext, int key) {
+    int len = strlen(plaintext);
+    char rail[key][len];
+    memset(rail, '\n', sizeof(rail));  // Initialize the rail matrix with newline characters
+
+    int row = 0, col = 0;
+    int direction_down = 0;  // To check whether the direction is down or up
+
+    // Fill the rail matrix
+    for (int i = 0; i < len; i++) {
+        // Place the current character in the rail
+        rail[row][col++] = plaintext[i];
+
+        // Check the direction and change it if necessary
+        if (row == 0 || row == key - 1) {
+            direction_down = !direction_down;
+        }
+
+        // Move to the next row depending on the direction
+        direction_down ? row++ : row--;
+    }
+
+    // Read the rail matrix row-wise to form the ciphertext
+    printf("Encrypted Text: ");
+    for (int i = 0; i < key; i++) {
+        for (int j = 0; j < len; j++) {
+            if (rail[i][j] != '\n') {
+                printf("%c", rail[i][j]);
+            }
+        }
+    }
+    printf("\n");
 }
-count=0;
-j=0;
-while(j<len)
-{
-if(count%2==0)
-{
-for(i=0;i<rails;i++)
-{
- //strcpy(code[i][j],str[j]);
- code[i][j]=(int)str[j]; 
- j++;
+
+// Function to decrypt the ciphertext using Rail Fence Cipher
+void decryptRailFence(char *ciphertext, int key) {
+    int len = strlen(ciphertext);
+    char rail[key][len];
+    memset(rail, '\n', sizeof(rail));  // Initialize the rail matrix with newline characters
+
+    int row = 0, col = 0;
+    int direction_down = 0;
+
+    // Mark the positions to be filled
+    for (int i = 0; i < len; i++) {
+        // Mark the current position
+        rail[row][col++] = '*';
+
+        // Check the direction and change it if necessary
+        if (row == 0 || row == key - 1) {
+            direction_down = !direction_down;
+        }
+
+        // Move to the next row depending on the direction
+        direction_down ? row++ : row--;
+    }
+
+    // Fill the marked positions with the ciphertext characters
+    int index = 0;
+    for (int i = 0; i < key; i++) {
+        for (int j = 0; j < len; j++) {
+            if (rail[i][j] == '*' && index < len) {
+                rail[i][j] = ciphertext[index++];
+            }
+        }
+    }
+
+    // Read the rail matrix in a zigzag manner to form the plaintext
+    printf("Decrypted Text: ");
+    row = 0, col = 0;
+    direction_down = 0;
+    for (int i = 0; i < len; i++) {
+        printf("%c", rail[row][col++]);
+
+        // Check the direction and change it if necessary
+        if (row == 0 || row == key - 1) {
+            direction_down = !direction_down;
+        }
+
+        // Move to the next row depending on the direction
+        direction_down ? row++ : row--;
+    }
+    printf("\n");
 }
+
+int main() {
+    char plaintext[100];
+    int key;
+
+    // Input the plaintext and the key
+    printf("Enter the plaintext: ");
+    scanf("%[^\n]%*c", plaintext);  // Read until newline character
+    printf("Enter the key: ");
+    scanf("%d", &key);
+
+    // Encrypt the plaintext
+    encryptRailFence(plaintext, key);
+
+    // Input the ciphertext for decryption
+    char ciphertext[100];
+    printf("Enter the ciphertext to decrypt: ");
+    scanf(" %[^\n]%*c", ciphertext);  // Read until newline character
+
+    // Decrypt the ciphertext
+    decryptRailFence(ciphertext, key);
+
+    return 0;
 }
-else
-{
-for(i=rails-2;i>0;i--)
-{
- code[i][j]=(int)str[j];
-j++;
-} 
-} 
-count++;
-}
-for(i=0;i<rails;i++)
-{
-for(j=0;j<len;j++)
-{
- if(code[i][j]!=0)
- printf("%c",code[i][j]);
-}
-}
-printf("\n");
-}
+
 ```
 ## OUTPUT:
-![image](https://github.com/22008421/Cryptography---19CS412-classical-techqniques/assets/119476328/39417e01-9dd5-4b24-916e-1b48a5067ef1)
+
+![Screenshot 2024-08-30 141027](https://github.com/user-attachments/assets/925058cc-b107-4ed4-a389-f8b47e887ad8)
+
 
 ## RESULT:
 The program is executed successfully
