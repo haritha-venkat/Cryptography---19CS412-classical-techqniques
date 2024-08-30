@@ -285,6 +285,7 @@ Testing algorithm with different key values.
 
 ## PROGRAM:
 ```python
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>  // Include the necessary header for toupper()
@@ -410,7 +411,9 @@ Implementation using C or pyhton code
 Testing algorithm with different key values. 
 
 ## PROGRAM:
+
 ```python
+
 #include <stdio.h>
 #include <string.h>
 
@@ -510,6 +513,7 @@ Testing algorithm with different key values.
 
 ## PROGRAM:
 ```python
+
 #include <stdio.h>
 #include <string.h>
 
