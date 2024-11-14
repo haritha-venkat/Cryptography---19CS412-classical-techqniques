@@ -1,26 +1,17 @@
-# Cryptography---19CS412-classical-techqniques
-
-# Caeser Cipher
-Caeser Cipher using with different key values
-
+# EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
 # AIM:
-
 To develop a simple C program to implement Caeser Cipher.
-
-## DESIGN STEPS:
-
+# ALGORITHM:
 ### Step 1:
-
 Design of Caeser Cipher algorithnm 
-
 ### Step 2:
-
 Implementation using C or pyhton code
-
 ### Step 3:
-
 Testing algorithm with different key values. 
-
+### STEP-4: 
+Else subtract the key from the plain text.
+### STEP-5: 
+Display the cipher text obtained above.
 ## PROGRAM:
 ```python
 #include <stdio.h>
@@ -67,7 +58,7 @@ int main() {
 
 
 ## RESULT:
-The program is executed successfully
+The program for caesar cipher is executed successfully.
 
 ---------------------------------
 
@@ -77,26 +68,24 @@ The program is executed successfully
 
 
 
-# PlayFair Cipher
-Playfair Cipher using with different key values
+# EX.-NO-1-B-IMPLEMENTATION-OF-PLAYFAIR-CIPHER
 
 # AIM:
-
 To develop a simple C program to implement PlayFair Cipher.
 
-## DESIGN STEPS:
-
-### Step 1:
-
-Design of PlayFair Cipher algorithnm 
-
-### Step 2:
-
-Implementation using C or pyhton code
-
-### Step 3:
-
-Testing algorithm with different key values. 
+# ALGORITHM:
+### STEP-1: 
+Read the plain text from the user.
+### STEP-2: 
+Read the keyword from the user.
+### STEP-3: 
+Arrange the keyword without duplicates in a 5*5 matrix in the row order and fill the
+remaining cells with missed out letters in alphabetical order. Note that ‘i’ and ‘j’ takes the same cell.
+### STEP-4: 
+Group the plain text in pairs and match the corresponding corner letters by forming a
+rectangular grid.
+### STEP-5: 
+Display the obtained cipher text.
 
 ## PROGRAM:
  ```python
@@ -253,7 +242,7 @@ return 0;
 
 
 ## RESULT:
-The program is executed successfully
+The program for playfair cipher is executed successfully.
 
 
 
@@ -263,28 +252,24 @@ The program is executed successfully
 ---------------------------
 
 
-# Hill Cipher
-Hill Cipher using with different key values
+# EX.-NO-1-C-IMPLEMENTATION-OF-HILL-CIPHER
 
 # AIM:
-
 To develop a simple C program to implement Hill Cipher.
 
-## DESIGN STEPS:
+# ALGORITHM:
+### STEP-1: 
+Read the plain text and key from the user.
+### STEP-2: 
+Split the plain text into groups of length three.
+### STEP-3: 
+Arrange the keyword in a 3*3 matrix.
+### STEP-4: 
+Multiply the two matrices to obtain the cipher text of length three.
+### STEP-5: 
+Combine all these groups to get the complete cipher text.
 
-### Step 1:
-
-Design of Hill Cipher algorithnm 
-
-### Step 2:
-
-Implementation using C or pyhton code
-
-### Step 3:
-
-Testing algorithm with different key values. 
-
-## PROGRAM:
+# PROGRAM:
 ```python
 
 #include <stdio.h>
@@ -384,33 +369,38 @@ int main() {
 
 
 ## RESULT:
-The program is executed successfully
 
+Thus the hill cipher substitution technique had been implemented successfully.
 -------------------------------------------------
 
 
-# Vigenere Cipher
-Vigenere Cipher using with different key values
+# EX.-NO-1-D-IMPLEMENTATION-OF-VIGENERECIPHER
 
 # AIM:
-
 To develop a simple C program to implement Vigenere Cipher.
 
-## DESIGN STEPS:
+# ALGORITHM:
+### STEP-1: 
+Arrange the alphabets in row and column of a 26*26 matrix.
+### STEP-2: 
+Circulate the alphabets in each row to position left such that the first letter is attached to
+last.
+### STEP-3: 
+Repeat this process for all 26 rows and construct the final key matrix.
+### STEP-4: 
+The keyword and the plain text is read from the user.
+### STEP-5: 
+The characters in the keyword are repeated sequentially so as to match with that of the
+plain text.
+### STEP-6: 
+Pick the first letter of the plain text and that of the keyword as the row indices and column
+indices respectively.
+### STEP-7: 
+The junction character where these two meet forms the cipher character.
+### STEP-8: 
+Repeat the above steps to generate the entire cipher
 
-### Step 1:
-
-Design of Vigenere Cipher algorithnm 
-
-### Step 2:
-
-Implementation using C or pyhton code
-
-### Step 3:
-
-Testing algorithm with different key values. 
-
-## PROGRAM:
+# PROGRAM:
 
 ```python
 
@@ -491,26 +481,18 @@ The program is executed successfully
 
 
 
-# Rail Fence Cipher
-Rail Fence Cipher using with different key values
+# EX.-NO-2-A-IMPLEMENTATION-OF-RAILFENCE-CIPHER
 
 # AIM:
 
 To develop a simple C program to implement Rail Fence Cipher.
 
-## DESIGN STEPS:
+# ALGORITHM:
 
-### Step 1:
-
-Design of Rail Fence Cipher algorithnm 
-
-### Step 2:
-
-Implementation using C or pyhton code
-
-### Step 3:
-
-Testing algorithm with different key values. 
+In the rail fence cipher, the plaintext is written downwards and diagonally on successive "rails" of an
+imaginary fence, then moving up when we reach the bottom rail. When we reach the top rail, the
+message is written downwards again until the whole plaintext is written out. The message is then
+read off in rows. 
 
 ## PROGRAM:
 ```python
