@@ -1,4 +1,4 @@
-# EX. NO: 1(A) : IMPLEMENTATION OF CAESAR CIPHER
+# EX.NO-1-IMPLEMENTATION OF CAESAR CIPHER
 # AIM:
 To develop a simple C program to implement Caeser Cipher.
 # ALGORITHM:
@@ -68,7 +68,7 @@ The program for caesar cipher is executed successfully.
 
 
 
-# EX.-NO-1-B-IMPLEMENTATION-OF-PLAYFAIR-CIPHER
+# EX.-NO-2-IMPLEMENTATION-OF-PLAYFAIR-CIPHER
 
 # AIM:
 To develop a simple C program to implement PlayFair Cipher.
@@ -252,7 +252,7 @@ The program for playfair cipher is executed successfully.
 ---------------------------
 
 
-# EX.-NO-1-C-IMPLEMENTATION-OF-HILL-CIPHER
+# EX.-NO-3-IMPLEMENTATION-OF-HILL-CIPHER
 
 # AIM:
 To develop a simple C program to implement Hill Cipher.
@@ -374,7 +374,7 @@ Thus the hill cipher substitution technique had been implemented successfully.
 -------------------------------------------------
 
 
-# EX.-NO-1-D-IMPLEMENTATION-OF-VIGENERECIPHER
+# EX.-NO-4-IMPLEMENTATION-OF-VIGENERECIPHER
 
 # AIM:
 To develop a simple C program to implement Vigenere Cipher.
@@ -481,7 +481,7 @@ The program is executed successfully
 
 
 
-# EX.-NO-2-A-IMPLEMENTATION-OF-RAILFENCE-CIPHER
+# EX.-NO-5-A-IMPLEMENTATION-OF-RAILFENCE-CIPHER
 
 # AIM:
 
