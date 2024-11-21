@@ -1,6 +1,5 @@
 # EX.NO-1-IMPLEMENTATION OF CAESAR CIPHER
-# NAME:HARITHA SHREE
-# REG NO:212222230046
+
 # AIM:
 To develop a simple C program to implement Caeser Cipher.
 # ALGORITHM:
@@ -71,8 +70,7 @@ The program for caesar cipher is executed successfully.
 
 
 # EX.-NO-2-IMPLEMENTATION-OF-PLAYFAIR-CIPHER
-# NAME:HARITHA SHREE
-# REG NO:212222230046
+
 
 # AIM:
 To develop a simple C program to implement PlayFair Cipher.
@@ -257,8 +255,7 @@ The program for playfair cipher is executed successfully.
 
 
 # EX.-NO-3-IMPLEMENTATION-OF-HILL-CIPHER
-# NAME:HARITHA SHREE
-# REG NO:212222230046
+
 # AIM:
 To develop a simple C program to implement Hill Cipher.
 
@@ -380,8 +377,8 @@ Thus the hill cipher substitution technique had been implemented successfully.
 
 
 # EX.-NO-4-IMPLEMENTATION-OF-VIGENERECIPHER
-# NAME:HARITHA SHREE
-# REG NO:212222230046
+
+
 # AIM:
 To develop a simple C program to implement Vigenere Cipher.
 
@@ -488,8 +485,7 @@ The program is executed successfully
 
 
 # EX.-NO-5-A-IMPLEMENTATION-OF-RAILFENCE-CIPHER
-# NAME:HARITHA SHREE
-# REG NO:212222230046
+
 # AIM:
 
 To develop a simple C program to implement Rail Fence Cipher.
